@@ -14,7 +14,8 @@ tags:
 - Java 8
 ---
 
-The last [post]({% post_url 2023-11-08-a-simple-class-file-parser %}) was about a class file parser that I worked on for some time. In the meantime, I integrated this parser in a new project that aims to implement a simple JVM. The project is called VigurVM. Named after an island from Iceland. The JVM has the same target, class files compiled for the Java 8 standard (class file version 52).
+The last [post]({% post_url 2023-11-08-a-simple-class-file-parser %}) was about a class file parser that I worked on for some time. In the meantime, I integrated this parser in a new project that aims to implement a simple JVM. The project is called VigurVM. Named after an island from Iceland.
+The source code, can be found on my personal Github at [https://github.com/fernandezseb/Experimental-VigurVM](https://github.com/fernandezseb/Experimental-VigurVM).
 
 The main goal at the moment of the project is to be able to print at least Hello World to standard out. For this to work, the JVM has to set up a PrintStream at System.out.[^1] This object and all of its dependencies need to be created by the JVM. At the moment it is not yet possible to do this with the current instructions and standard library native method implementations.
 
@@ -56,9 +57,6 @@ This exact definition of how the instruction should appear as well as its operan
 
 ## Native Implementations
 In Java it is possible to execute external code that is implemented in other programming languages using native methods. In the sourcode, the user marks the method as **native** using the **native** keyword. A native method can't have a body inside the Java sourcecode, because the code to be executed by the JVM resides somewhere else. The JVM at runtime must look in a predefined way for the correct implementation. This can be used by anyone, but is also a very important specifically inside the JVM itself. The JVM implementation uses a lot of native methods to handle interactions with the code of the JVM itself (Which is written in C++ in the case of VigurVM. The Hotspot virtual machine also is written in C++.). Because this happens quite frequently, we handle this in a more optimized way than when we want to call external code that resides outside of the JVM implementaion. This optimized, but less flexible way of handling native code, is implemented already currently in VigurVM. Calling external native code, isn't implemented yet at the moment of writing, and will be lower on the priority list of features.
-
-## Project repository
-The source code for this project, can be found on my personal Github [here](https://github.com/fernandezseb/Experimental-VigurVM).
 
 
 Thanks for reading, and see you in the next post!
