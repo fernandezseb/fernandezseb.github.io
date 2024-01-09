@@ -1,6 +1,6 @@
 ---
 title:  "A simple JVM"
-date:   2024-01-09 20:40::23 +0100
+date:   2024-01-09 20:10::23 +0100
 categories: programming
 tags:
 - update
