@@ -12,6 +12,7 @@ tags:
 - class file
 - HotSpot
 - Java 8
+- VigurVM
 ---
 
 The last [post]({% post_url 2023-11-08-a-simple-class-file-parser %}) was about a class file parser that I worked on for some time. In the meantime, I integrated this parser in a new project that aims to implement a simple JVM. The project is called **VigurVM**. Named after an island from Iceland.
