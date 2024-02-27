@@ -112,4 +112,4 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# github: [metadata]
+github: [metadata]
