@@ -48,6 +48,7 @@ jobs:
         env:
           JEKYLL_ENV: production
           PAGES_REPO_NWO: fernandezseb/fernandezseb.github.io
+          PAGES_GITHUB_HOSTNAM: sebfernandez.be
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
